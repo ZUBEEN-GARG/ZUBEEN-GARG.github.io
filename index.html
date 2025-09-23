@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tribute to Zubeen da</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #33ff33;
+      font-family: "Courier New", Courier, monospace;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #111;
+      padding: 20px;
+      border-bottom: 2px solid #33ff33;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      animation: flicker 2s infinite alternate;
+    }
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.8; }
+      100% { opacity: 0.6; }
+    }
+    .ascii-art {
+      white-space: pre;
+      text-align: center;
+      margin: 20px;
+      color: #00ffcc;
+    }
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    h2 {
+      border-left: 4px solid #33ff33;
+      padding-left: 10px;
+      margin-top: 40px;
+    }
+    a {
+      color: #ff6600;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      border-top: 2px solid #33ff33;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.8em;
+      color: #999;
+    }
+    .code-box {
+      background: #111;
+      border: 1px solid #33ff33;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 0.9em;
+      color: #33ff33;
+    }
+    .blink {
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+      from, to { color: transparent; }
+      50% { color: #33ff33; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>&lt; Tribute to Zubeen da ❤️ ></h1>
+  </header>
+
+  <main>
+    <h2>From the Raiz</h2>
+    <p>
+      A voice that transcends boundaries.  
+      An artist who gave words to our emotions.  
+      A legend who remains in the hearts of millions.  <b>"Joi Zubeen Da ❤️"</b>.
+    </p>
+
+    <h2>An open threat</h2>
+    <p>
+      This is an open threat to Sidhartha Sharma and Shyamkanu Mahanta, Requesting to the government: if the named two individuals are not arrested within the upcoming week, we will take matter in our hands and will start leaking important private files to the public related to their personal life which will anyway bring them down and there is no way of escape. The digital world is not binded by the borders, we are watching! Moi khatir nokoru kela.
+    </p>
+
+    <h2>Regards</h2>
+    <p>
+      You know who (from the raiz, for the raiz)
+    </p>
+  </main>
+
+<!-- Background music -->
+<audio id="bg-music" loop>
+  <source src="https://pagallworlds.com/wp-content/uploads/2023/12/Mayabini-Zubeen-Assamese.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+
+<!-- Play Button -->
+<div class="terminal-btn">
+  <button id="play-btn">▶️ PLAY MUSIC</button>
+</div>
+
+<style>
+  .terminal-btn {
+    text-align: center;
+    margin: 20px;
+  }
+  #play-btn {
+    background-color: #111;
+    color: #33ff33;
+    border: 2px solid #33ff33;
+    padding: 12px 25px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 10px #33ff33;
+  }
+  #play-btn:hover {
+    background-color: #33ff33;
+    color: #111;
+    box-shadow: 0 0 20px #33ff33;
+  }
+  #play-btn:active {
+    transform: scale(0.95);
+  }
+</style>
+
+<script>
+  const audio = document.getElementById("bg-music");
+  const playBtn = document.getElementById("play-btn");
+  const startTime = 60; // start at 60 seconds
+
+  playBtn.addEventListener("click", () => {
+    audio.addEventListener("loadedmetadata", () => {
+      if (audio.duration > startTime) {
+        audio.currentTime = startTime;
+      }
+      audio.play();
+    });
+
+    // Start playing immediately if metadata already loaded
+    if (audio.readyState > 0) {
+      if (audio.duration > startTime) {
+        audio.currentTime = startTime;
+      }
+      audio.play();
+    }
+
+playBtn.innerText = "♫ Playing Tribute...";
+    playBtn.disabled = true;
+    playBtn.style.opacity = "0.7";
+    playBtn.style.cursor = "default";
+  });
+</script>
+
+</body>
+</html>
