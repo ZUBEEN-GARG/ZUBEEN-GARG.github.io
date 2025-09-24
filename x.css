@@ -1,1 +1,9 @@
-
+/* x.css */
+html, body { background: #ffeb3b !important; }           /* bright yellow */
+* { outline: 2px dashed #f44336 !important; }             /* red dashed outlines */
+body::before {
+  content: "x.css LOADED";
+  position: fixed; left: 16px; top: 16px;
+  padding: 6px 10px; background: #111; color: #fff;
+  font: 600 14px/1 system-ui; z-index: 2147483647;
+}
